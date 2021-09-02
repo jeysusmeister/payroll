@@ -16,7 +16,6 @@
                 $action="inicio";
                 $ruta=SitesModel::obtenerModulos($action);
             }
-            echo $ruta;
             include realpath($ruta);
         }
     }

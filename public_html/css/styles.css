@@ -1,0 +1,24 @@
+.wrapperform {
+    background-color: red;
+    width:225px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.wrapperform .line {
+    padding: 5px;
+}
+
+.wrapperform input {
+    border-radius: 4px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.wrapperform button {
+    font-size: 1rem;
+    border-radius: 4px;
+    height: 30px;
+    font-weight: bold;
+    padding:5px;
+}

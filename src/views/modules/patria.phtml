@@ -1,1 +1,28 @@
-<h1>Patria</h1>
+<div class="patria">
+    <!--<h1>Patria</h1>-->
+    <div class="wrapperform">
+        <form id="form-patria" method="post">
+            <div class="line">
+                <input type="text" id="nbNumero" name="nbNumero" pattern="[0-9]{4}" required placeholder="Ingresa el código nómina" />
+            </div>
+            <div class="line">
+                <input type="text" id="txtDesnom" placeholder="Descripción de la nómina" name="txtDesnom" readonly  />
+            </div>
+            <div class="line">
+                <button type="submit">Generar TXT</button>
+            </div>
+        </form>        
+    </div>
+    <div id="a"></div>
+</div>
+<?php 
+
+use PayRoll\controllers\patria\PatriaController;
+
+var_dump($_POST);
+$patria = new PatriaController();
+$patria->obtener();
+
+if(isset($_POST['nbNumero']))
+    echo $_POST['nbNumero']; 
+?>

@@ -4,6 +4,7 @@
 
     class ConexionBd {
         public function conectar() {
+            echo 12345;
             try {
                 $link=new PDO("pgsql:host=127.0.0.1;port=5432;dbname=prueba","postgres","503503", 
                 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]

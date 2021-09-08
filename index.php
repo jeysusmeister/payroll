@@ -5,8 +5,7 @@
     use PayRoll\models\ConexionBd;
     $sites = new SitesController();
     $sites->actionInicio(); 
-
-    echo 12345;
+    
     $a = new \PayRoll\models\ConexionBd();
     $a->conectar();
     

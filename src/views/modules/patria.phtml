@@ -12,17 +12,5 @@
                 <button type="submit">Generar TXT</button>
             </div>
         </form>        
-    </div>
-    <div id="a"></div>
+    </div>    
 </div>
-<?php 
-
-use PayRoll\controllers\patria\PatriaController;
-
-var_dump($_POST);
-$patria = new PatriaController();
-$patria->obtener();
-
-if(isset($_POST['nbNumero']))
-    echo $_POST['nbNumero']; 
-?>

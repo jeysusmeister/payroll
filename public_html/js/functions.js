@@ -8,42 +8,26 @@ function imprimirPantalla(formPatriaData) {
     divNumero.innerHTML=dataNumero;
 }
 
-let _data = {
-    title: "foo",
-    body: "bar",
-    userId: 1
-}
-
 nbNumero.addEventListener("change", ()=>{
     if(nbNumero.value.length==4) {
         txtDesnom.value=nbNumero.value;
-        let data = new FormData(formPatria).get('nbNumero')
-        fetch('./src/views/modules/patria.phtml',{
+        let data = new FormData(formPatria);
+        console.log("datadef ",data.get('nbNumero'));
+        data.append('numero', data.get('nbNumero'))
+        fetch('src/views/modules/procesar.php', {
             method:'POST',
-            body: data,
-            //headers: { "Content-type": "application/json; charset=UTF-8" }
+            body:data
         })
-            .then(function (response) {
-                if (response.ok) {
-                    console.log("vvvvv ",response);
-                    document.getElementById('a').innerHTML=response;
-                    return response.text()
-                } else {
-                    throw "Error en la llamada Ajax";
-                }
-
-            })
-            .then(function (texto) {
-                console.log(texto);
-            })
-            .catch(function (err) {
-                console.log(err);
-            });
-
-
-        
-           
-
+        .then( res =>{
+            if(res.ok){
+                return res.text();
+            }else{
+                throw 'No funciona';
+            }
+        })
+        .then( text => {
+            txtDesnom.value=text
+        })
     }
 })
 
@@ -53,7 +37,3 @@ formPatria.addEventListener('submit', e =>{
     imprimirPantalla(formPatriaData);
     let valor = formPatriaData.get('nbNumero');    
 });
-
-//alert(123)
-
-

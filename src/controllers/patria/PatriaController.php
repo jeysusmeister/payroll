@@ -2,10 +2,9 @@
     namespace PayRoll\controllers\patria;
     
     class PatriaController {
-        public function obtener():void {
-            echo $_POST['desnom'];
+        public function obtener(string $numero):void {
+            echo $numero;
         }
 
-
-
     }
+    

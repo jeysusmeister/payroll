@@ -7,5 +7,6 @@
     $sites->actionInicio(); */
     
     $a = new \PayRoll\models\ConexionBd();
+    var_dump($a);
     $a->conectar();
     

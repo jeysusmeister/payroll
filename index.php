@@ -3,8 +3,8 @@
     require_once realpath('./config/main.php');
     use PayRoll\controllers\sites\SitesController;
     use PayRoll\models\ConexionBd;
-    $sites = new SitesController();
-    $sites->actionInicio(); 
+    /*$sites = new SitesController();
+    $sites->actionInicio(); */
     
     $a = new \PayRoll\models\ConexionBd();
     $a->conectar();

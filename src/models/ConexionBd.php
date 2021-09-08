@@ -6,7 +6,7 @@
         public function conectar() {
             echo 12345;
             try {
-                $link=new PDO("pgsql:host=127.0.0.1;port=5432;dbname=prueba","postgres","503503", 
+                $link=new PDO("pgsql:host=172.16.0.101;port=5433;dbname=prueba","postgres","s1st3m4s2424bd", 
                 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
             ); echo "funciona";
             } catch (PDOException $e) {

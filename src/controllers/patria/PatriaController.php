@@ -2,11 +2,13 @@
     namespace PayRoll\controllers\patria;
 
     use PayRoll\models\patria\PatriaModel;
+    require_once realpath('./src/models/patria/PatriaController.php');
     
     
     class PatriaController {
         public function obtener(string $numero):void {
-           echo "voy por aqui";        
+           $a=PatriaModel::obtener($numero);
+           echo $a;       
         }
 
     }

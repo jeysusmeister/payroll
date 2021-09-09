@@ -26,8 +26,7 @@ nbNumero.addEventListener("change", ()=>{
             }
         })
         .then(text => {
-            console.log("texto ",text)
-            txtDesnom.value=text
+            txtDesnom.value=123
         })
     }
 })

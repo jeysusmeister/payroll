@@ -14,16 +14,16 @@
             $this->numero=$numero;
         }
         public function obtenerControladorPatria(string $numero){
-            $asd = new PatriaController();
-            $asd->obtener($numero);                       
+            echo $numero;
+            //$asd = new PatriaController();
+            //$asd->obtener($numero);                       
         }
     }
     
     $a=new Procesar();
     $a->setNumero($_POST['numero']);
     $numero=$a->getNumero();
-    echo $numero;
-    //$a->obtenerControladorPatria($numero);
+    $a->obtenerControladorPatria($numero);
 
 
 

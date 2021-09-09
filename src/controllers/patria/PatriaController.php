@@ -1,7 +1,7 @@
 <?php
     namespace PayRoll\controllers\patria;
 
-    use \PayRoll\models\patria\PatriaModel;
+    use PayRoll\models\patria\PatriaModel;
     
     
     class PatriaController {

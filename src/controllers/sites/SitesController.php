@@ -10,6 +10,7 @@
         }
         public function obtenerModulos():void{
             $action=$_GET['action'];
+            echo $action;
             if(isset($action)){
                 $ruta=SitesModel::obtenerModulos($action);
             } else {

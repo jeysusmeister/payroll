@@ -4,8 +4,8 @@
     use PayRoll\models\ConexionBd; 
     
     class PatriaModel {
-        public static function obtener(string $numero):string {
-            return "el numero ".$numero;
+        public static function obtener(string $numero):int {
+            return $numero+1;
         }
         
 

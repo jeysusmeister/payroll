@@ -26,7 +26,7 @@ nbNumero.addEventListener("change", ()=>{
             }
         })
         .then(text => {
-            txtDesnom.value=123
+            txtDesnom.value=text
         })
     }
 })

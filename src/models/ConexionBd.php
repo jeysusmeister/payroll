@@ -13,11 +13,11 @@
         
         public function __construct() {
             require_once realpath('./config/database.php');
-            $this->setHost($anfi);
-            $this->setDbname($dbname);
-            $this->setUser($user);
-            $this->setPass($pass);
-            $this->setPort($port);
+            $this->setHost("172.16.0.101");
+            $this->setDbname("tves_2021");
+            $this->setUser("postgres");
+            $this->setPass("s1st3m4s2424bd");
+            $this->setPort("5433");
         }
 
         public function conectar():PDO {

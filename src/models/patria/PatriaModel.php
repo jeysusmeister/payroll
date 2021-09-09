@@ -5,7 +5,7 @@
     
     class PatriaModel {
         public static function obtener(string $numero):string {
-            return " ".numero;
+            return " ".$numero;
         }
         
 

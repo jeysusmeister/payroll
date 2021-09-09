@@ -2,7 +2,7 @@
     namespace PayRoll\controllers\patria;
 
     use PayRoll\models\patria\PatriaModel;
-    require_once realpath('./src/models/patria/PatriaController.php');
+    require_once realpath('../../models/patria/PatriaModel.php');
     
     
     class PatriaController {

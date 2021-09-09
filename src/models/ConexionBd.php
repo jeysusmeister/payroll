@@ -2,8 +2,7 @@
     namespace PayRoll\models;
 
 	use PDO;
-    
-    
+        
     class ConexionBd {
         private $host;
         private $port;
@@ -42,7 +41,6 @@
         }
 
         public function setHost(string $host):void{
-            echo "aaa ".$host;
             $this->host=$host;
         }
 

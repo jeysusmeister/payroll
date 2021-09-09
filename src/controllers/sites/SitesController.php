@@ -9,12 +9,14 @@
             include realpath('./src/views/template.phtml');
         }
         public function obtenerModulos():void{
-            $action=$_GET['action'];
-            echo $action;
+            $action = empty($_GET['action']) ? 'inicio': $_GET['action'];
             if(isset($action)){
                 $ruta=SitesModel::obtenerModulos($action);
             } else if(!isset($action)) {
-                $action="inicio";
+                //$action="inicio";
+                $ruta=SitesModel::obtenerModulos($action);
+            } else {
+                //$action="inicio";
                 $ruta=SitesModel::obtenerModulos($action);
             }
             include realpath($ruta);

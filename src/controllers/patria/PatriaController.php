@@ -6,9 +6,8 @@
     
     class PatriaController {
         public function obtener(string $numero):void {
-           // $patriamodel = \PayRoll\models\patria\PatriaModel::obtener($numero);
-           // echo $patriamodel;
-            echo "asq";
+           $patriamodel = PatriaModel::obtener($numero);
+           echo $patriamodel;           
         }
 
     }

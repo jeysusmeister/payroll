@@ -9,7 +9,7 @@
         private $pass;
         
         public function __construct() {
-            require_once realpath('../../config/main.php');
+            require_once realpath('./config/main.php');
             $this->setHost(HOST);
             $this->setDbname(DBNAME);
             $this->setUser(USER);

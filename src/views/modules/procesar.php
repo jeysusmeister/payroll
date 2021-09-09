@@ -22,7 +22,8 @@
     $a=new Procesar();
     $a->setNumero($_POST['numero']);
     $numero=$a->getNumero();
-    $a->obtenerControladorPatria($numero);
+    echo $numero;
+    //$a->obtenerControladorPatria($numero);
 
 
 

@@ -4,7 +4,7 @@
     //use PayRoll\models\ConexionBd; 
     
     class PatriaModel {
-        public static function obtener(string $numero):string {
+        public static function obtener($numero):string {
             return $numero." esto";
         }
         

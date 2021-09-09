@@ -6,8 +6,7 @@
     
     class PatriaController {
         public function obtener(string $numero):void {
-           $patriamodel=PatriaModel::obtener($numero);
-           echo $patriamodel;           
+           echo "voy por aqui";        
         }
 
     }

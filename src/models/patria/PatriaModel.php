@@ -1,4 +1,5 @@
 <?php
+    
     namespace PayRoll\models\patria;
 
     //use PayRoll\models\ConexionBd; 

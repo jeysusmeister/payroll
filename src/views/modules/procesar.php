@@ -1,6 +1,7 @@
 <?php
     require_once realpath('../../controllers/patria/PatriaController.php');
     use \PayRoll\controllers\patria\PatriaController;
+        
     class Procesar{
         private $numero;
         public function __construct(){

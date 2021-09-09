@@ -13,10 +13,8 @@
             if(isset($action)){
                 $ruta=SitesModel::obtenerModulos($action);
             } else if(!isset($action)) {
-                //$action="inicio";
                 $ruta=SitesModel::obtenerModulos($action);
             } else {
-                //$action="inicio";
                 $ruta=SitesModel::obtenerModulos($action);
             }
             include realpath($ruta);

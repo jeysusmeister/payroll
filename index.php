@@ -4,8 +4,8 @@
 	//ini_set('display_startup_errors', 1);
 	//error_reporting(E_ALL);
     // end del proyecto
-    require_once realpath('./vendor/autoload.php');
-    require_once realpath('./config/main.php');
+    require realpath('./vendor/autoload.php');
+    require realpath('./config/main.php');
     use PayRoll\controllers\sites\SitesController;
     use PayRoll\models\patria\PatriaModel;
     $sites = new SitesController();

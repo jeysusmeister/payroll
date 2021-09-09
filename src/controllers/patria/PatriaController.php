@@ -1,6 +1,6 @@
 <?php
     namespace PayRoll\controllers\patria;
-    require_once realpath('../../../vendor/autoload.php');
+    //require_once realpath('../../../vendor/autoload.php');
     use PayRoll\models\patria\PatriaModel;
     
     

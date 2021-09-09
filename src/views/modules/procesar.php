@@ -1,5 +1,5 @@
 <?php
-    //require realpath('../../../vendor/autoload.php');
+    require realpath('../../../vendor/autoload.php');
     use PayRoll\controllers\patria\PatriaController;
         
     class Procesar{

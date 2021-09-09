@@ -1,6 +1,9 @@
 <?php
     namespace PayRoll\models;
+
 	use PDO;
+    
+    
     class ConexionBd {
         private $host;
         private $port;
@@ -10,13 +13,11 @@
         
         public function __construct() {
             require_once realpath('./config/database.php');
-            echo HOST;
-            echo DBNAME;
-            $this->setHost(HOST);
-            $this->setDbname(DBNAME);
-            $this->setUser(USER);
-            $this->setPass(PASS);
-            $this->setPort(PORT);
+            $this->setHost($host);
+            $this->setDbname($dbname);
+            $this->setUser($user);
+            $this->setPass($pass);
+            $this->setPort($port);
         }
 
         public function conectar():PDO {
@@ -67,7 +68,6 @@
         public function setPass(string $pass):void{
             $this->pass=$pass;
         }
-
     }
 
 $a = new ConexionBd();

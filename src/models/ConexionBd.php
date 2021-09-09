@@ -1,20 +1,69 @@
 <?php
     namespace PayRoll\models;
 	use PDO;
-
     class ConexionBd {
-        public function conectar() {
+        private $host;
+        private $port;
+        private $dbname;
+        private $user;
+        private $pass;
+        
+        public function __construct() {
+            require_once realpath('../../config/main.php');
+            $this->setHost(HOST);
+            $this->setDbname(DBNAME);
+            $this->setUser(USER);
+            $this->setPass(PASS);
+            $this->setPort(PORT);
+        }
+
+        public function conectar():PDO {
             try {
-                $link=new \PDO("pgsql:host=172.116.0.101;port=5433;dbname=prueba;","postgres","s1st3m4s2424bd",[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-                if ($link) {
-                    echo "Connected to theb database successfully!";
-                }else{ 
-                    echo "no";
-                }
+                $link=new \PDO("pgsql:host=$this->getHost();port=$this->getPort();dbname=$this->getDbname();","$this->getUser()","$this->getPass()",[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
             } catch (PDOException $e) {
                 die("[ERROR] ".$e->getMessage());
             }
             return $link;
+        }
+
+        public function getHost():string{
+            return $this->host;
+        }
+
+        public function setHost(string $host):void{
+            $this->host=$host;
+        }
+
+        public function getPort():string{
+            return $this->port;
+        }
+
+        public function setPort(string $port):void{
+            $this->port=$port;
+        }
+
+        public function getDbname():string{
+            return $this->dbname;
+        }
+
+        public function setDbname(string $dbname):void{
+            $this->dbname=$dbname;
+        }
+
+        public function getUser():string{
+            return $this->user;
+        }
+
+        public function setUser(string $user):void{
+            $this->user=$user;
+        }
+
+        public function getPass():string{
+            return $this->pass;
+        }
+
+        public function setPass(string $pass):void{
+            $this->pass=$pass;
         }
 
     }

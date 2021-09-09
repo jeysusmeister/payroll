@@ -1,6 +1,6 @@
 <?php
     require_once realpath('../../controllers/patria/PatriaController.php');
-    use \PayRoll\controllers\patria\PatriaController;
+    use PayRoll\controllers\patria\PatriaController;
         
     class Procesar{
         private $numero;
@@ -14,9 +14,8 @@
             $this->numero=$numero;
         }
         public function obtenerControladorPatria(string $numero){
-            echo $numero;
-            //$asd = new PatriaController();
-            //$asd->obtener($numero);                       
+            $asd = new PatriaController();
+            $asd->obtener($numero);                       
         }
     }
     

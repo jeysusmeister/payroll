@@ -21,13 +21,16 @@
         }
 
         public function conectar():PDO {
-            $host   = $this->getHost();
-            $dbname = $this->getDbname();
-            $user   = $this->getUser();
-            $pass   = $this->getPass();
-            $port   = $this->getPort();echo $host;
+            $paramConex = [
+                "host"   => $this->getHost(),
+                "dbname" => $this->getDbname(),
+                "user"   => $this->getUser(),
+                "pass"   => $this->getPass(),
+                "port"   => $this->getPort()
+            ];
+
             try {
-                $link=new \PDO("pgsql:host=$host;port=$port;dbname=$dbname;","$user","$pass",[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
+                $link=new \PDO("pgsql:host=".$paramConex['host'].";port=".$paramConex['port'].";dbname=".$paramConex['dbname'].";",$paramConexuser['user'],$paramConex['pass'],[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
             } catch (PDOException $e) {
                 die("[ERROR] ".$e->getMessage());
             }

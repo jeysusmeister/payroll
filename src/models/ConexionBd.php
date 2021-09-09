@@ -13,7 +13,7 @@
         
         public function __construct() {
             require_once realpath('./config/database.php');
-            $this->setHost($host);
+            $this->setHost($anfi);
             $this->setDbname($dbname);
             $this->setUser($user);
             $this->setPass($pass);

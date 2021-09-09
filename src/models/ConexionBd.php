@@ -21,6 +21,12 @@
         }
 
         public function conectar():PDO {
+            $this->setHost($host);
+            $this->setDbname($dbname);
+            $this->setUser($user);
+            $this->setPass($pass);
+            $this->setPort($port);die;
+            
             try {
                 $link=new \PDO("pgsql:host=$this->getHost();port=$this->getPort();dbname=$this->getDbname();","$this->getUser()","$this->getPass()",[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
             } catch (PDOException $e) {

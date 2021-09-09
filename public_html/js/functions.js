@@ -5,14 +5,14 @@ const nbNumero   = document.querySelector('#nbNumero');
 
 function imprimirPantalla(formPatriaData) {
     let dataNumero = formPatriaData.get('nbNumero');
-    divNumero.innerHTML=dataNumero;
+    divNumero.innerHTML = dataNumero;
 }
 
 nbNumero.addEventListener("change", ()=>{
     if(nbNumero.value.length==4) {
         txtDesnom.value=nbNumero.value;
         let data = new FormData(formPatria);
-        console.log("datadef ",data.get('nbNumero'));
+        //console.log("datadef ",data.get('nbNumero'));
         data.append('numero', data.get('nbNumero'))
         fetch('src/views/modules/procesar.php', {
             method:'POST',
@@ -20,20 +20,21 @@ nbNumero.addEventListener("change", ()=>{
         })
         .then( res =>{
             if(res.ok){
-                return res.text();
+                return res.text()
             }else{
-                throw 'No funciona';
+                throw 'No funciona'
             }
         })
-        .then( text => {
+        .then(text => {
+            console.log("texto ",text)
             txtDesnom.value=text
         })
     }
 })
-
+/*
 formPatria.addEventListener('submit', e =>{
     e.preventDefault()
     const formPatriaData = new FormData(e.currentTarget)
     imprimirPantalla(formPatriaData);
     let valor = formPatriaData.get('nbNumero');    
-});
+});*/

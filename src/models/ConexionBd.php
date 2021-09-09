@@ -13,7 +13,6 @@
         
         public function __construct() {
             require_once realpath('./config/database.php');
-            echo $host;
             $this->setHost($host);
             $this->setDbname($dbname);
             $this->setUser($user);
@@ -26,7 +25,7 @@
             $dbname = $this->getDbname();
             $user   = $this->getUser();
             $pass   = $this->getPass();
-            $port   = $this->getPort();
+            $port   = $this->getPort();echo $host;
             try {
                 $link=new \PDO("pgsql:host=$host;port=$port;dbname=$dbname;","$user","$pass",[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
             } catch (PDOException $e) {

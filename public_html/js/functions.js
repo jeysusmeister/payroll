@@ -18,7 +18,7 @@ nbNumero.addEventListener("change", ()=>{
             method:'POST',
             body:data
         })
-        .then( res =>{
+        .then(res =>{
             if(res.ok){
                 return res.text()
             }else{

@@ -13,7 +13,7 @@
             echo $action;
             if(isset($action)){
                 $ruta=SitesModel::obtenerModulos($action);
-            } else {
+            } else if(!isset($action)) {
                 $action="inicio";
                 $ruta=SitesModel::obtenerModulos($action);
             }

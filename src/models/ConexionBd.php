@@ -37,33 +37,33 @@
             return $link;
         }
         public static function getHost():string{
-            return $this->host;
+            return ConexionBD::$host;
         }
         public static function setHost(string $host):void{
-            $this->host=$host;
+            ConexionBD::$host=$host;
         }
         public static function getPort():string{
-            return $this->port;
+            return ConexionBD::$port;
         }
         public static function setPort(string $port):void{
-            $this->port=$port;
+            ConexionBD::$port=$port;
         }
         public static function getDbname():string{
-            return $this->dbname;
+            return ConexionBD::$dbname;
         }
         public static function setDbname(string $dbname):void{
-            $this->dbname=$dbname;
+            ConexionBD::$dbname=$dbname;
         }
         public static function getUser():string{
-            return $this->user;
+            return ConexionBD::$user;
         }
         public static function setUser(string $user):void{
-            $this->user=$user;
+            ConexionBD::$user=$user;
         }
         public static function getPass():string{
-            return $this->pass;
+            return ConexionBD::$pass;
         }
         public static function setPass(string $pass):void{
-            $this->pass=$pass;
+            ConexionBD::$pass=$pass;
         }
     }

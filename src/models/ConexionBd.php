@@ -16,12 +16,12 @@ ini_set('display_errors', 1);
         private $pass;
         
         public function __construct() {
-            require_once realpath('./config/database.php');
-            $this->setHost($param_conex['host']);
-            $this->setDbname($param_conex['dbname']);
-            $this->setUser($param_conex['user']);
-            $this->setPass($param_conex['pass']);
-            $this->setPort($param_conex['port']);
+            //require_once realpath('./config/database.php');
+            $this->setHost('172.16.0.101');
+            $this->setDbname('tves_2021');
+            $this->setUser('postgres');
+            $this->setPass('s1st3m4s2424bd');
+            $this->setPort('5433');
         }
         public function conectar():PDO {
             $paramConex = [

@@ -11,14 +11,10 @@
             $sth = $con->conectar()->prepare($sql);
             $sth->execute(array($numero));
             $desnom = $sth->fetchAll();
-            foreach ($desnom as $key => $value) {
-                # code...
-                echo $key;
-            }   
             echo "<pre>";
             var_dump($desnom);
             
-            return $desnom['desnom'];
+            return $desnom[0]['desnom'];
         }
 
         

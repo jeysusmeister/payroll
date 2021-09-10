@@ -23,7 +23,7 @@ ini_set('display_errors', 1);
             $this->setPass('s1st3m4s2424bd');
             $this->setPort('5433');
         }
-        public function conectar():PDO {
+        public static function conectar():PDO {
             $paramConex = [
                 "host"   => $this->getHost(),
                 "dbname" => $this->getDbname(),

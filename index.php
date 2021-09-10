@@ -12,5 +12,6 @@
     //$sites = new SitesController();
     //$sites->actionInicio();
 
-    $a=ConexionBD::conectar();
+    $a=new ConexionBD();
+    $a->conectar();
 

@@ -5,26 +5,26 @@
 	use PDO;
         
     class ConexionBd {
-        private static $host;
-        private static $port;
-        private static $dbname;
-        private static $user;
-        private static $pass;
+        private $host;
+        private $port;
+        private $dbname;
+        private $user;
+        private $pass;
         public function __construct() {
             //require_once realpath('./config/database.php');
-            self::setHost('172.16.0.101');
-            self::setDbname('tves_2021');
-            self::setUser('postgres');
-            self::setPass('s1st3m4s2424bd');
-            self::setPort('5433');
+            $this->setHost('172.16.0.101');
+            $this->setDbname('tves_2021');
+            $this->setUser('postgres');
+            $this->setPass('s1st3m4s2424bd');
+            $this->setPort('5433');
         }
-        public static function conectar():PDO {
+        public function conectar():PDO {
             $paramConex = [
-                "host"   => self::getHost(),
-                "dbname" => self::getDbname(),
-                "user"   => self::getUser(),
-                "pass"   => self::getPass(),
-                "port"   => self::getPort()
+                "host"   => $this->getHost(),
+                "dbname" => $this->getDbname(),
+                "user"   => $this->getUser(),
+                "pass"   => $this->getPass(),
+                "port"   => $this->getPort()
             ];
             var_dump($paramConex);die;
             try {
@@ -35,34 +35,34 @@
             }
             return $link;
         }
-        public static function getHost():string{
-            return self::$host;
+        public function getHost():string{
+            return $this->host;
         }
-        public static function setHost(string $host):void{
-            self::$host=$host;
+        public function setHost(string $host):void{
+            $this->host=$host;
         }
-        public static function getPort():string{
-            return self::$port;
+        public function getPort():string{
+            return $this->port;
         }
-        public static function setPort(string $port):void{
-            self::$port=$port;
+        public function setPort(string $port):void{
+            $this->port=$port;
         }
-        public static function getDbname():string{
-            return self::$dbname;
+        public function getDbname():string{
+            return $this->dbname;
         }
-        public static function setDbname(string $dbname):void{
-            self::$dbname=$dbname;
+        public function setDbname(string $dbname):void{
+            $this->dbname=$dbname;
         }
-        public static function getUser():string{
-            return self::$user;
+        public function getUser():string{
+            return $this->user;
         }
-        public static function setUser(string $user):void{
-            self::$user=$user;
+        public function setUser(string $user):void{
+            $this->user=$user;
         }
-        public static function getPass():string{
-            return self::$pass;
+        public function getPass():string{
+            return $this->pass;
         }
-        public static function setPass(string $pass):void{
-            self::$pass=$pass;
+        public function setPass(string $pass):void{
+            $this->pass=$pass;
         }
     }

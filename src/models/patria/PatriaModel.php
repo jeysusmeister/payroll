@@ -11,7 +11,7 @@
             $sth = $con->conectar()->prepare($sql);
             $sth->execute(array($numero));
             $desnom = $sth->fetchAll();        
-            return $desnom;
+            return $desnom['desnom'];
         }
 
         

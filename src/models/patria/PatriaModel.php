@@ -6,6 +6,7 @@
     
     class PatriaModel {
         public static function obtener($numero):string {
+            $a = new ConexionBd();$a->conectar();
             return $numero." esto";
         }
         

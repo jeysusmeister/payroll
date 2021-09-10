@@ -5,7 +5,13 @@
     $pass   = "s1st3m4s2424bd";
     $port   = "5433";
 
-    
+$param_conex = [
+    'host'   => $host,
+    'dbname' => $dbname,
+    'user'   => $user,
+    'pass'   => $pass,
+    'port'   => $port
+];    
 
 
 

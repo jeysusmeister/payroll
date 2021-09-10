@@ -2,10 +2,6 @@
 
     namespace PayRoll\models;
 
-ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
-
 	use PDO;
         
     class ConexionBd {
@@ -34,7 +30,7 @@ ini_set('display_errors', 1);
 
             try {
                 $link=new \PDO("pgsql:host=".$paramConex['host'].";port=".$paramConex['port'].";dbname=".$paramConex['dbname'].";",$paramConex['user'],$paramConex['pass'],[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
-                //echo "conexion exitosa";
+                echo "conexion exitosa";
             } catch (PDOException $e) {
                 die("[ERROR] ".$e->getMessage());
             }
@@ -71,5 +67,3 @@ ini_set('display_errors', 1);
             $this->pass=$pass;
         }
     }
-
-   

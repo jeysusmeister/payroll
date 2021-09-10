@@ -22,7 +22,8 @@ nbNumero.addEventListener("change", ()=>{
             if(res.ok){
                 return res.text()
             }else{
-                throw 'No funciona'
+                //throw 'No funciona'
+                return 'No funciona'
             }
         })
         .then(text => {

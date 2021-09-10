@@ -8,9 +8,8 @@
     require realpath('./config/main.php');
     use PayRoll\controllers\sites\SitesController;
     use PayRoll\models\patria\PatriaModel;
-    use PayRoll\models\ConexionBd;
-    //$sites = new SitesController();
-    //$sites->actionInicio();
+    $sites = new SitesController();
+    $sites->actionInicio();
 
     
 

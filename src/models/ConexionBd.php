@@ -10,7 +10,6 @@
         private static $dbname;
         private static $user;
         private static $pass;
-        
         public function __construct() {
             //require_once realpath('./config/database.php');
             self::setHost('172.16.0.101');
@@ -27,7 +26,7 @@
                 "pass"   => self::getPass(),
                 "port"   => self::getPort()
             ];
-
+            var_dump($paramConex);die;
             try {
                 $link=new \PDO("pgsql:host=".$paramConex['host'].";port=".$paramConex['port'].";dbname=".$paramConex['dbname'].";",$paramConex['user'],$paramConex['pass'],[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
                 echo "conexion exitosa";

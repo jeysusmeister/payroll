@@ -8,10 +8,10 @@
     require realpath('./config/main.php');
     use PayRoll\controllers\sites\SitesController;
     use PayRoll\models\patria\PatriaModel;
-    //$sites = new SitesController();
-    //$sites->actionInicio();
-    $a = PatriaModel::obtenerDesNom('0101');
-    var_dump($a);die;
+    $sites = new SitesController();
+    $sites->actionInicio();
+    //$a = PatriaModel::obtenerDesNom('0101');
+    //var_dump($a);die;
     //echo $a;
     
 

@@ -11,9 +11,6 @@
             $sth = $con->conectar()->prepare($sql);
             $sth->execute(array($numero));
             $desnom = $sth->fetchAll();
-            echo "<pre>";
-            var_dump($desnom);
-            
             return $desnom[0]['desnom'];
         }
 

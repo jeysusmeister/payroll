@@ -30,7 +30,11 @@ nbNumero.addEventListener("change", ()=>{
         .then(text => {
             txtDesnom.value=text
         })
-        btnGenerarTxt.setAttribute('disabled', false);
+        if (txtDesnom.value==="")
+            btnGenerarTxt.disabled=true
+        else
+            btnGenerarTxt.disabled=false
+
 
     }
 })

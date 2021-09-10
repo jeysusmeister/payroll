@@ -10,7 +10,11 @@
             $sql = 'SELECT desnom FROM sno_nomina WHERE codnom=?'; 
             $sth = $con->conectar()->prepare($sql);
             $sth->execute(array($numero));
-            $desnom = $sth->fetchAll();   
+            $desnom = $sth->fetchAll();
+            foreach ($desnom as $key => $value) {
+                # code...
+                echo $key;
+            }   
             echo "<pre>";
             var_dump($desnom);
             

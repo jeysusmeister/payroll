@@ -23,7 +23,7 @@ nbNumero.addEventListener("change", ()=>{
                 return res.text()
             }else{
                 //throw 'No funciona'
-                return 'No funciona'
+                return 'El número de nómina no es correcto'
             }
         })
         .then(text => {

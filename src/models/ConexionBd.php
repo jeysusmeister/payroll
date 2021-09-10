@@ -13,19 +13,19 @@
         
         public function __construct() {
             //require_once realpath('./config/database.php');
-            ConexionBD::setHost('172.16.0.101');
-            ConexionBD::setDbname('tves_2021');
-            ConexionBD::setUser('postgres');
-            ConexionBD::setPass('s1st3m4s2424bd');
-            ConexionBD::setPort('5433');
+            self::setHost('172.16.0.101');
+            self::setDbname('tves_2021');
+            self::setUser('postgres');
+            self::setPass('s1st3m4s2424bd');
+            self::setPort('5433');
         }
         public static function conectar():PDO {
             $paramConex = [
-                "host"   => ConexionBD::getHost(),
-                "dbname" => ConexionBD::getDbname(),
-                "user"   => ConexionBD::getUser(),
-                "pass"   => ConexionBD::getPass(),
-                "port"   => ConexionBD::getPort()
+                "host"   => self::getHost(),
+                "dbname" => self::getDbname(),
+                "user"   => self::getUser(),
+                "pass"   => self::getPass(),
+                "port"   => self::getPort()
             ];
 
             try {
@@ -37,33 +37,33 @@
             return $link;
         }
         public static function getHost():string{
-            return ConexionBD::$host;
+            return self::$host;
         }
         public static function setHost(string $host):void{
-            ConexionBD::$host=$host;
+            self::$host=$host;
         }
         public static function getPort():string{
-            return ConexionBD::$port;
+            return self::$port;
         }
         public static function setPort(string $port):void{
-            ConexionBD::$port=$port;
+            self::$port=$port;
         }
         public static function getDbname():string{
-            return ConexionBD::$dbname;
+            return self::$dbname;
         }
         public static function setDbname(string $dbname):void{
-            ConexionBD::$dbname=$dbname;
+            self::$dbname=$dbname;
         }
         public static function getUser():string{
-            return ConexionBD::$user;
+            return self::$user;
         }
         public static function setUser(string $user):void{
-            ConexionBD::$user=$user;
+            self::$user=$user;
         }
         public static function getPass():string{
-            return ConexionBD::$pass;
+            return self::$pass;
         }
         public static function setPass(string $pass):void{
-            ConexionBD::$pass=$pass;
+            self::$pass=$pass;
         }
     }

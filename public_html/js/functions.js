@@ -28,14 +28,13 @@ nbNumero.addEventListener("change", ()=>{
             }
         })
         .then(text => {
+            if (txtDesnom.value === "")
+                btnGenerarTxt.disabled = true
+            else
+                btnGenerarTxt.disabled = false
             txtDesnom.value=text
         })
-        if (txtDesnom.value==="")
-            btnGenerarTxt.disabled=true
-        else
-            btnGenerarTxt.disabled=false
-
-
+        
     }
 })
 

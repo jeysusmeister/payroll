@@ -26,7 +26,6 @@
                 "pass"   => $this->getPass(),
                 "port"   => $this->getPort()
             ];
-            var_dump($paramConex);die;
             try {
                 $link=new \PDO("pgsql:host=".$paramConex['host'].";port=".$paramConex['port'].";dbname=".$paramConex['dbname'].";",$paramConex['user'],$paramConex['pass'],[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);                
                 echo "conexion exitosa";

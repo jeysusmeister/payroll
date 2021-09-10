@@ -32,14 +32,13 @@ nbNumero.addEventListener("change", ()=>{
                 return res.text()
             }else{
                 //throw 'No funciona'
+                btnGenerarTxt.disabled = true
                 return 'El número de nómina no es correcto'
             }
         })
-        .then(text => {
-            
+        .then(text => {            
             txtDesnom.value=text
-        })
-        
+        })        
     }
 })
 

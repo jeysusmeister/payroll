@@ -1,7 +1,7 @@
 <?php
 
     namespace PayRoll\models\patria;
-    require realpath('../../models/ConexionBd.php');
+    require realpath('../../../vendor/autoload.php');
     use PayRoll\models\ConexionBd; 
     
     class PatriaModel {

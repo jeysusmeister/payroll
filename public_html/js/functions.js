@@ -9,7 +9,15 @@ function imprimirPantalla(formPatriaData) {
     divNumero.innerHTML = dataNumero;
 }
 
+function activarBoton(){
+    if (txtDesnom.value === "")
+        btnGenerarTxt.disabled = true
+    else
+        btnGenerarTxt.disabled = false
+}
+
 nbNumero.addEventListener("change", ()=>{
+    activarBoton()
     if(nbNumero.value.length==4) {
         txtDesnom.value=nbNumero.value;
         let data = new FormData(formPatria);
@@ -28,10 +36,7 @@ nbNumero.addEventListener("change", ()=>{
             }
         })
         .then(text => {
-            if (txtDesnom.value === "")
-                btnGenerarTxt.disabled = true
-            else
-                btnGenerarTxt.disabled = false
+            
             txtDesnom.value=text
         })
         

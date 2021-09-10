@@ -1,6 +1,6 @@
 .wrapperform {
     background-color: red;
-    width:450px;
+    width:430px;
     border-radius: 4px;
     padding: 10px;
 }
@@ -13,7 +13,7 @@
     border-radius: 4px;
     height: 30px;
     font-size: 1rem;
-    
+
 }
 
 .wrapperform button {

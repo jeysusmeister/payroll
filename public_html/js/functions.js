@@ -2,6 +2,7 @@
 const formPatria = document.querySelector('#form-patria');
 const txtDesnom  = document.querySelector('#txtDesnom');
 const nbNumero   = document.querySelector('#nbNumero');
+const btnGenerarTxt = document.querySelector('#btnGenerarTXT');
 
 function imprimirPantalla(formPatriaData) {
     let dataNumero = formPatriaData.get('nbNumero');
@@ -29,8 +30,13 @@ nbNumero.addEventListener("change", ()=>{
         .then(text => {
             txtDesnom.value=text
         })
+        btnGenerarTxt.setAttribute('disabled', false);
+
     }
 })
+
+
+
 /*
 formPatria.addEventListener('submit', e =>{
     e.preventDefault()
